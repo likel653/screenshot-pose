@@ -1,0 +1,7 @@
+-r requirements.txt
+rtmlib==0.0.14
+onnxruntime==1.23.2
+onnxruntime-gpu[cuda,cudnn]==1.23.2
+nvidia-cudnn-cu12==9.10.2.21
+opencv-python==4.11.0.86
+opencv-contrib-python==4.11.0.86

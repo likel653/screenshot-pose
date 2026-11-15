@@ -1,0 +1,6 @@
+{
+  "python": "C:/path/to/recognition-env/Scripts/python.exe",
+  "runtime": "C:/path/to/ScreenshotPose/runtime",
+  "gpu_python": "C:/path/to/gpu-env/Scripts/python.exe",
+  "sam_root": "C:/path/to/SAM-runner"
+}

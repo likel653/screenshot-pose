@@ -1,0 +1,4 @@
+interface:
+  display_name: "图片视频转 Blender 工程"
+  short_description: "调用 Screenshot Pose 插件识别图片视频、生成角色关键帧并交付工程"
+  default_prompt: "使用 $screenshot-pose-project 将提供的图片或视频生成带角色姿势和关键帧的 Blender 工程。"

@@ -1,0 +1,7 @@
+# Install only into the external worker's private Python environment.
+# MediaPipe's Tasks API and py3 Windows wheel work with Python 3.12/3.13.
+# 0.10.32 predates the Clearcut telemetry observed in 0.10.35 Windows builds.
+mediapipe==0.10.32
+Pillow==12.0.0
+numpy==2.3.4
+opencv-python==4.11.0.86

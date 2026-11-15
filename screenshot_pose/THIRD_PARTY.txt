@@ -1,0 +1,17 @@
+Screenshot Pose code: MIT (see LICENSE).
+Optional runtime packages and downloaded model weights are not included in this ZIP.
+RTMLib: https://github.com/Tau-J/rtmlib (Apache-2.0).
+RTMW / YOLOX exports: https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose
+ONNX Runtime: https://github.com/microsoft/onnxruntime (MIT).
+MediaPipe: https://github.com/google-ai-edge/mediapipe (Apache-2.0).
+Model download source URLs and SHA-256 values are recorded in rtmw_manifest.json after setup.
+Use third-party models under their respective published terms; the add-on MIT license does not relicense weights or training datasets.
+
+RTMW3D research implementation: https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose3d
+ONNX export used by RTMLib: https://huggingface.co/Soykaf/RTMW3D-x
+NVIDIA CUDA and cuDNN runtime packages are installed separately under their respective vendor terms.
+Optional SAM 3D Body DINOv3 GGUF: https://huggingface.co/LocalAI-io/sam-3d-body-dinov3-GGUF
+Native runner: https://github.com/localai-org/sam3d.cpp
+MHR geometry metadata is derived from the public MHR LOD1 GGUF (Apache-2.0; see MHR_LICENSE.txt).
+SAM_LICENSE.txt and SAM_NOTICE.txt record the separate optional SAM weights' source terms; no weights are bundled.
+The original weights, native binaries and compiler/SDK are not included in the add-on ZIP.

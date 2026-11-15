@@ -1,0 +1,7 @@
+{
+  "project_root": "C:/path/to/screenshot-pose",
+  "blender": "C:/path/to/blender.exe",
+  "python": "C:/path/to/gpu-env/Scripts/python.exe",
+  "template": "C:/path/to/character.blend",
+  "rig": "CharacterRig"
+}
