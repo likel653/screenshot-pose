@@ -1,4 +1,6 @@
 Screenshot Pose code: MIT (see LICENSE).
+MediaPipe, NumPy, Pillow, downloaded models, and sample images retain their
+own licenses.
 Optional runtime packages and downloaded model weights are not included in this ZIP.
 RTMLib: https://github.com/Tau-J/rtmlib (Apache-2.0).
 RTMW / YOLOX exports: https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose
