@@ -743,6 +743,8 @@ HaMeR 官方流程要求另行注册取得 `MANO_RIGHT.pkl`。用户当前没有
 
 ## 来源与许可
 
+[第三方依赖与许可](https://github.com/likel653/screenshot-pose/blob/main/screenshot_pose/THIRD_PARTY.txt)列出了各上游项目的用途、许可和随包数据来源。安装包也在插件目录中提供 `THIRD_PARTY.txt`。
+
 本插件源码采用随包 MIT 许可证，外部依赖、模型和样例保留各自许可。
 
 - [MediaPipe Pose Landmarker 官方文档](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker/python)

@@ -1,19 +1,79 @@
-Screenshot Pose code: MIT (see LICENSE).
-MediaPipe, NumPy, Pillow, downloaded models, and sample images retain their
-own licenses.
-Optional runtime packages and downloaded model weights are not included in this ZIP.
-RTMLib: https://github.com/Tau-J/rtmlib (Apache-2.0).
-RTMW / YOLOX exports: https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose
-ONNX Runtime: https://github.com/microsoft/onnxruntime (MIT).
-MediaPipe: https://github.com/google-ai-edge/mediapipe (Apache-2.0).
-Model download source URLs and SHA-256 values are recorded in rtmw_manifest.json after setup.
-Use third-party models under their respective published terms; the add-on MIT license does not relicense weights or training datasets.
+Screenshot Pose | Third-party notices
+=====================================
 
-RTMW3D research implementation: https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose3d
-ONNX export used by RTMLib: https://huggingface.co/Soykaf/RTMW3D-x
-NVIDIA CUDA and cuDNN runtime packages are installed separately under their respective vendor terms.
-Optional SAM 3D Body DINOv3 GGUF: https://huggingface.co/LocalAI-io/sam-3d-body-dinov3-GGUF
-Native runner: https://github.com/localai-org/sam3d.cpp
-MHR geometry metadata is derived from the public MHR LOD1 GGUF (Apache-2.0; see MHR_LICENSE.txt).
-SAM_LICENSE.txt and SAM_NOTICE.txt record the separate optional SAM weights' source terms; no weights are bundled.
-The original weights, native binaries and compiler/SDK are not included in the add-on ZIP.
+Screenshot Pose's original code is licensed under MIT (see LICENSE).
+Third-party code, model weights and data are subject to their respective terms.
+External model weights, MANO data, runtime packages and native binaries are
+obtained separately. The derived data distributed with the add-on is listed below.
+
+Pose estimation
+---------------
+* Google MediaPipe | Body, face and hand landmark detection. Project code: Apache-2.0.
+  https://github.com/google-ai-edge/mediapipe
+  https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker
+* OpenMMLab MMPose | RTMW, RTMW3D and RTMPose Hand for body and hand keypoints.
+  Project code: Apache-2.0. Consult the model sources for checkpoint terms.
+  https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose
+  https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose3d
+  https://huggingface.co/Soykaf/RTMW3D-x (community RTMW3D ONNX export)
+* YOLOX | Person detection for the RTM backends, using an OpenMMLab export.
+  The RTMW setup records download URLs and SHA-256 hashes in rtmw_manifest.json.
+  https://github.com/Megvii-BaseDetection/YOLOX
+* RTMLib and ONNX Runtime | Model wrappers and ONNX inference.
+  RTMLib code: Apache-2.0. ONNX Runtime code: MIT.
+  https://github.com/Tau-J/rtmlib
+  https://github.com/microsoft/onnxruntime
+* Meta SAM 3D Body and LocalAI | Optional 3D body reconstruction using LocalAI's
+  DINOv3 GGUF conversion and the sam3d.cpp native runner. See the model card and
+  retained SAM_LICENSE.txt and SAM_NOTICE.txt for the SAM weights. DINOv3 and
+  the companion MHR asset have separate terms documented by the distributor.
+  https://github.com/facebookresearch/sam-3d-body
+  https://huggingface.co/LocalAI-io/sam-3d-body-dinov3-GGUF
+  https://github.com/localai-org/sam3d.cpp
+
+Optional hand, head and camera estimation
+-----------------------------------------
+* HaMeR (MIT project code) and WiLoR | Optional 3D hand reconstruction.
+  WiLoR also provides an optional hand detector. See the upstream WiLoR
+  CC BY-NC-ND 4.0 license and the providers' terms for the weights.
+  https://github.com/geopavlakos/hamer
+  https://github.com/rolpotamias/WiLoR
+  https://github.com/rolpotamias/WiLoR/blob/main/license.txt
+* Hand Texture Module | Optional texture-supervised HaMeR checkpoint.
+  See the upstream project and checkpoint provider for their respective terms.
+  https://github.com/gkarv/Hand-Texture-Module
+* MANO | Hand model data used by HaMeR and WiLoR. Obtain MANO_RIGHT.pkl from
+  the provider and use it under the separate MANO license.
+  https://mano.is.tue.mpg.de/license.html
+* 6DRepNet360 | Optional head orientation estimation. Project code: MIT.
+  https://github.com/thohemp/6DRepNet360
+* AnyCalib | Optional camera intrinsics estimation from a single image.
+  Upstream code and weights: Apache-2.0.
+  https://github.com/javrtg/AnyCalib
+
+Optional video correction and data import
+----------------------------------------
+* toyxyz RGB MoCap | Optional foot-contact correction for generated animation
+  through the separately installed motion-correction module. Upstream original
+  code: MIT. The NVIDIA Kimodo MotionCorrection extension uses Apache-2.0.
+  See upstream notices for component terms.
+  https://github.com/toyxyz/toyxyz_RGBMocap
+  https://github.com/toyxyz/toyxyz_RGBMocap/blob/main/THIRD_PARTY_NOTICES.md
+* NAVER Multi-HMR / Anny | Import adapter for externally generated pose data.
+  The external model and Anny checkpoint are governed by their upstream terms.
+  https://github.com/naver/multi-hmr#license
+
+Derived data distributed with the add-on
+---------------------------------------
+* face_template.json | Selected landmark coordinates derived from Google's
+  MediaPipe canonical face mesh. Apache-2.0, see FACE_TEMPLATE_LICENSE.txt.
+  https://github.com/google-ai-edge/mediapipe/blob/master/mediapipe/modules/face_geometry/data/canonical_face_model.obj
+* sam_geometry.json | Skeleton metadata derived from Meta's MHR LOD1 asset
+  distributed as GGUF by LocalAI. Apache-2.0, see MHR_LICENSE.txt.
+  https://huggingface.co/LocalAI-io/sam-3d-body-dinov3-GGUF
+
+Runtime dependencies
+--------------------
+Python packages such as NumPy, Pillow, OpenCV and PyTorch are installed
+separately under their own licenses. Optional NVIDIA CUDA and cuDNN runtimes
+are subject to their vendor terms.
